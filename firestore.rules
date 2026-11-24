@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isStoreAdmin() {
+      return request.auth != null &&
+        request.auth.uid == "JZBRq09omwXLHUt3EiiAIlQL6Xi2";
+    }
+    match /watch_products/{id} {
+      allow read: if resource.data.active == true || isStoreAdmin();
+      allow create, update, delete: if isStoreAdmin();
+    }
+    match /watch_categories/{id} {
+      allow read: if true;
+      allow create, update, delete: if isStoreAdmin();
+    }
+    match /watch_orders/{id} {
+      allow create: if request.resource.data.keys().hasAll(['customer','items','total','status','createdAt']);
+      allow read, update, delete: if isStoreAdmin();
+    }
+    match /watch_pageViews/{id} {
+      allow create: if true;
+      allow read, update, delete: if isStoreAdmin();
+    }
+    match /watch_settings/{id} {
+      allow read: if true;
+      allow write: if isStoreAdmin();
+    }
+  }
+}

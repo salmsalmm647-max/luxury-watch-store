@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#24152f">
+  <title>متجر الساعات الفاخرة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">✧</span><span id="brandName">متجر الساعات الفاخرة<small>TIME • ELEGANCE • LUXURY</small></span></a>
+  <nav><a href="#home">الرئيسية</a><a href="#categories">الأقسام</a><a href="#products">الساعات</a><a href="#contact">تواصل معنا</a></nav>
+  <button class="cart-btn" id="openCart">السلة <b id="cartCount">0</b></button>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy"><span class="eyebrow">أناقة تليق بك</span><h1 id="heroTitle">وقتك… يستحق الفخامة</h1>
+  <p id="heroText">اكتشف تشكيلة مختارة من الساعات بتصاميم راقية ولمسات استثنائية.</p>
+  <a class="primary" href="#products">تسوق الآن <span>←</span></a></div>
+  <div class="hero-art"><div class="halo"></div><div class="watch-face"><div class="watch-strap"></div><div class="watch-dial"><i></i><b>12</b><em>03</em><strong>09</strong><small>06</small></div></div><span class="spark s1">✦</span><span class="spark s2">✧</span></div>
+</section>
+<section class="section" id="categories"><div class="section-head"><div><span class="eyebrow">تسوق حسب ذوقك</span><h2>أقسام المتجر</h2></div></div><div id="categoryGrid" class="category-grid"><p class="muted">يتم تحميل الأقسام…</p></div></section>
+<section class="section products-section" id="products"><div class="section-head"><div><span class="eyebrow">اختيارات مميزة</span><h2>أحدث الساعات</h2></div><span class="muted" id="productCount"></span></div><div id="productGrid" class="product-grid"><p class="muted">يتم تحميل المنتجات…</p></div></section>
+<section class="promise"><div>✧<b>تصاميم راقية</b><small>أناقة في كل تفصيلة</small></div><div>♡<b>خدمة مميزة</b><small>نهتم بتجربتك</small></div><div>⌚<b>اختيارات متنوعة</b><small>ما يناسب كل ذوق</small></div></section>
+<section class="contact section" id="contact"><span class="eyebrow">نسعد بتواصلك</span><h2>هل تحتاج إلى مساعدة؟</h2><p id="contactInfo">تواصل معنا للاستفسارات والطلبات.</p><a id="emailLink" class="outline" href="mailto:">راسلنا عبر البريد</a><a id="phoneLink" class="outline" href="tel:">اتصل بنا</a></section>
+</main>
+<footer><span id="footerName">متجر الساعات الفاخرة</span> <span>© جميع الحقوق محفوظة</span><a href="admin.html">إدارة المتجر</a></footer>
+<div class="overlay" id="cartOverlay" hidden><aside class="drawer"><button class="close" id="closeCart">×</button><h2>سلة المشتريات</h2><div id="cartItems"></div><div class="cart-total">الإجمالي: <b id="cartTotal">0</b></div><form id="checkoutForm"><input name="name" required placeholder="الاسم الكامل"><input name="phone" required placeholder="رقم الهاتف"><input name="address" required placeholder="المدينة والعنوان"><textarea name="notes" placeholder="ملاحظات إضافية (اختياري)"></textarea><button class="primary full">إرسال الطلب</button></form></aside></div>
+<div class="toast" id="toast"></div>
+<script type="module" src="store.js"></script>
+</body></html>
